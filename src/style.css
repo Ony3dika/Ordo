@@ -1,0 +1,25 @@
+@import "tailwindcss";
+/* @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"); */
+
+/* base fbfbf4 */
+/* text 1a1c22 */
+@theme {
+  --color-primary: #cccccb;
+  --color-secondary: #0f131a;
+  --color-light:#cbf7fa;
+  --color-terra: #ff9538;
+}
+
+.syne {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.cre{
+  color: #eff6fd;
+}
+
+
+.img-fil{
+  filter: saturate(0.25);
+}

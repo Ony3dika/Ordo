@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body
+    class="bg-primary syne [scrollbar-color:--alpha(var(--primary)/50%)_transparent] [scrollbar-width:thin]"
+  >
+    <!-- Navbar -->
+    <nav
+      class="fixed bottom-5 left-0 z-5 flex w-full flex-col items-center justify-between md:bottom-10"
+    >
+      <div
+        class="bg-secondary/90 border-primary/20 text-primary flex w-fit items-center gap-x-2 rounded border p-2 text-xs backdrop-blur-[1px] md:text-base"
+      >
+        <a
+          href="#hero"
+          class="hover:text-light/80 text-light flex h-8 items-center justify-center rounded px-4 font-semibold transition-all duration-150 ease-in md:h-12"
+          >Ordo</a
+        >
+        <a
+          href="#why"
+          class="border-primary/30 hover:bg-primary hover:text-secondary flex h-8 items-center justify-center rounded border px-4 transition-all duration-150 ease-in md:h-12"
+          >Why</a
+        >
+        <a
+          href="#benefits"
+          class="border-primary/30 hover:bg-primary hover:text-secondary flex h-8 items-center justify-center rounded border px-4 transition-all duration-150 ease-in md:h-12"
+          >Benefits</a
+        >
+        <a
+          href="#contact"
+          class="border-primary/30 hover:bg-primary hover:text-secondary flex h-8 items-center justify-center rounded border px-4 transition-all duration-150 ease-in md:h-12"
+          >Get Started</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero / Hero -->
+    <section
+      id="hero"
+      class="threejs-container relative isolate flex h-screen items-center justify-center"
+    >
+      <div
+        class="text-primary z-2 flex h-[95vh] w-[90vw] flex-col justify-between rounded-lg bg-transparent p-5 md:h-[95vh] md:w-[96vw] md:p-10"
+      >
+        <div>
+          <div class="flex items-start justify-between">
+            <h1 class="text-light text-lg font-medium md:text-xl lg:text-xl">
+              Ordo
+            </h1>
+
+            <button
+              class="text-secondary bg-light flex cursor-pointer items-center rounded px-4 py-2"
+            >
+              Get Early Access
+              <i class="hgi hgi-stroke hgi-arrow-right-02 ml-1"></i>
+            </button>
+          </div>
+
+          <p class="mt-10 text-3xl font-semibold md:text-7xl">
+            Order for modern work
+          </p>
+        </div>
+
+        <div class="">
+          <p class="text-base md:text-xl lg:text-2xl">
+            Ordo uses AI to turn scattered tasks, tools, and
+            <br class="hidden md:block" />
+            people into a single, flowing system.
+          </p>
+        </div>
+      </div>
+      <canvas
+        class="webgl absolute h-[95vh] w-[90vw] rounded-lg md:h-[95vh] md:w-[96vw]"
+      ></canvas>
+    </section>
+
+    <!-- Why -->
+    <section id="why" class="h-fit px-5 py-32 md:px-10 lg:px-20 lg:py-36">
+      <p class="text-center text-2xl md:text-5xl md:leading-12">
+        Work wasn’t meant to <br class="hidden md:block" />
+        feel this <span class="text-terra">fragmented</span>
+      </p>
+
+      <div
+        class="mt-10 flex w-full flex-col items-center justify-center gap-x-30 xl:flex-row"
+      >
+        <div class="basis-full">
+          <p class="text-base md:text-lg md:leading-10">
+            Teams juggle projects across disconnected tools, conversations
+            splinter across channels, and decisions vanish into endless message
+            threads. Context is constantly lost, priorities blur, and progress
+            becomes hard to see. People stay busy responding and updating, yet
+            real momentum slows. The problem isn’t effort or talent — it’s the
+            lack of a system that brings everything together, making work
+            visible, connected, and aligned as it moves forward.
+          </p>
+        </div>
+
+        <div
+          class="align-container relative mt-10 w-full md:h-[40vh] lg:mt-20 lg:h-[50vh] lg:w-[60vw] xl:mt-0"
+        >
+          <canvas class="align h-full w-full"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section
+      id="benefits"
+      class="scroll-section px-5 py-10 md:px-10 md:py-20 lg:px-20"
+    >
+      <p class="text-center text-2xl md:text-5xl md:leading-12">
+        Ordo brings everything <br class="hidden md:block" />
+        into <span class="text-terra">alignment</span>
+      </p>
+
+      <div
+        class="mt-10 flex h-full grid-cols-9 grid-rows-2 flex-col gap-y-16 md:gap-y-32 lg:gap-10 lg:gap-y-36 xl:grid xl:gap-y-40"
+      >
+        <!-- Work -->
+        <div class="relative col-start-1 col-end-4 h-1/2 rounded-md md:h-fit">
+          <img
+            src="/work.jpg"
+            class="img-fil h-full w-full rounded object-cover"
+            alt=""
+          />
+          <div
+            class="bg-secondary text-primary outline-primary absolute bottom-0 left-0 flex h-fit w-2/3 items-center rounded-2xl rounded-tl-none rounded-br-none p-2 outline-6"
+          >
+            <p class="text-xs md:text-base">
+              It doesn’t replace how you work. It makes it make sense.
+            </p>
+          </div>
+        </div>
+
+        <!-- Lights -->
+        <div class="relative col-start-7 col-end-10 h-full rounded-md">
+          <img
+            src="/light.jpg"
+            class="img-fil h-full w-full rounded object-cover"
+            alt=""
+          />
+          <div
+            class="bg-secondary text-primary outline-primary absolute top-0 right-0 flex h-fit w-2/3 items-center rounded-2xl rounded-tl-none rounded-br-none p-2 outline-6"
+          >
+            <p class="text-xs md:text-base">
+              Ordo continuously analyzes tasks, conversations, and timelines to
+              keep work moving in the right direction.
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 2 Caption -->
+        <div class="col-span-2 col-start-1">
+          <p class="text-base font-semibold">Ordo — Benefits & Usecases</p>
+        </div>
+
+        <!-- Long Paragraph -->
+        <div class="lg:col-start-4 lg:col-end-6">
+          <p class="text-sm">
+            Ordo brings clarity to modern work by quietly coordinating what
+            matters most. It reduces manual oversight by automatically surfacing
+            priorities, connecting related tasks across tools, and keeping teams
+            aligned without constant check-ins or status meetings. <br />
+            <br />
+            Instead of adding another system to manage, Ordo works in the
+            background, lowering cognitive load and allowing teams to focus on
+            execution rather than coordination. The result is calmer workflows,
+            fewer dropped tasks, and faster, more confident decision-making.
+            <br />
+            <br />
+            Ordo is built for product and engineering teams, distributed and
+            remote organizations, operations and delivery teams, and
+            fast-growing startups—any environment where complexity increases
+            faster than structure and where order must emerge without friction.
+          </p>
+        </div>
+
+        <!-- Glitch Img -->
+        <div class="h-1/2 lg:col-start-7 lg:col-end-10">
+          <img
+            src="/glitch.jpg"
+            class="img-fil w-full rounded object-cover"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Final -->
+    <footer id="contact" class="my-20 px-5 md:my-40 md:px-10 lg:px-20">
+      <div
+        class="bg-secondary text-primary flex h-fit flex-col items-center justify-center rounded-lg p-5 md:h-96 md:p-10"
+      >
+        <p class="text-center text-2xl md:text-5xl">
+          From <span class="text-terra">Chaos</span> to
+          <span class="text-light">Clarity</span>
+        </p>
+        <p class="mt-2 text-center text-base md:text-lg lg:text-xl">
+          Start working in a system that understands order.
+        </p>
+
+        <button
+          class="text-secondary bg-light mt-10 flex w-fit cursor-pointer items-center rounded px-4 py-2"
+        >
+          Get Early Access
+          <i class="hgi hgi-stroke hgi-arrow-right-02 ml-1"></i>
+        </button>
+      </div>
+    </footer>
+
+    <footer class="flex justify-end px-5 py-5 md:px-10 lg:px-20">
+      <p class="text-xs">© 2026 Ordo</p>
+    </footer>
+
+    <script type="module" src="./hero.js"></script>
+    <script type="module" src="./align.js"></script>
+  </body>
+</html>
