@@ -65,7 +65,7 @@ window.addEventListener("mousemove", (e) => {
     params.radius += mouse.x;
   }
   params.radius = mouse.x * 1.5 + 1;
-  console.log(mouse);
+  // console.log(mouse);
 
   // Mesh
   geometry = new THREE.SphereGeometry(params.radius, 30, 50);

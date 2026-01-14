@@ -19,7 +19,16 @@
   color: #eff6fd;
 }
 
-
 .img-fil{
   filter: saturate(0.25);
+}
+
+.mask-one{
+  mask-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.032) 10%, rgb(0, 0, 0));
+  --webkit-mask-image:linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.032) 10%, rgb(0, 0, 0));
+}
+
+.mask-two{
+  mask-image: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0.032) 80%, rgba(0, 0, 0, 0));
+  --webkit-mask-image:linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0.032) 80%, rgba(0, 0, 0, 0));
 }

@@ -14,15 +14,17 @@
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
-    />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body
     class="bg-primary syne [scrollbar-color:--alpha(var(--primary)/50%)_transparent] [scrollbar-width:thin]"
   >
+    <!-- Preloader -->
+    <div
+      class="bg-primary preload fixed z-10 h-screen w-screen"
+    ></div>
+    
     <!-- Navbar -->
     <nav
       class="fixed bottom-5 left-0 z-5 flex w-full flex-col items-center justify-between md:bottom-10"
@@ -46,7 +48,7 @@
           >Benefits</a
         >
         <a
-          href="#contact"
+          href="#start"
           class="border-primary/30 hover:bg-primary hover:text-secondary flex h-8 items-center justify-center rounded border px-4 transition-all duration-150 ease-in md:h-12"
           >Get Started</a
         >
@@ -59,7 +61,7 @@
       class="threejs-container relative isolate flex h-screen items-center justify-center"
     >
       <div
-        class="text-primary z-2 flex h-[95vh] w-[90vw] flex-col justify-between rounded-lg bg-transparent p-5 md:h-[95vh] md:w-[96vw] md:p-10"
+        class="text-primary z-2 flex h-[96vh] w-[96vw] flex-col justify-between rounded-lg bg-transparent p-5 md:h-[95vh] md:w-[96vw] md:p-10"
       >
         <div>
           <div class="flex items-start justify-between">
@@ -68,20 +70,24 @@
             </h1>
 
             <button
-              class="text-secondary bg-light flex cursor-pointer items-center rounded px-4 py-2"
+              class="text-secondary group bg-light flex cursor-pointer items-center rounded px-4 py-2"
             >
               Get Early Access
-              <i class="hgi hgi-stroke hgi-arrow-right-02 ml-1"></i>
+              <img
+                src="/image.png"
+                class="ml-1 h-4 w-4 transition-all duration-150 ease-in-out group-hover:ml-3"
+                alt="arrow-right"
+              />
             </button>
           </div>
 
-          <p class="mt-10 text-3xl font-semibold md:text-7xl">
+          <p class="split mt-10 w-fit pt-4 text-3xl font-semibold md:text-7xl">
             Order for modern work
           </p>
         </div>
 
         <div class="">
-          <p class="text-base md:text-xl lg:text-2xl">
+          <p class="split text-base md:text-xl lg:text-2xl">
             Ordo uses AI to turn scattered tasks, tools, and
             <br class="hidden md:block" />
             people into a single, flowing system.
@@ -89,13 +95,13 @@
         </div>
       </div>
       <canvas
-        class="webgl absolute h-[95vh] w-[90vw] rounded-lg md:h-[95vh] md:w-[96vw]"
+        class="webgl absolute h-[96vh] w-[96vw] rounded-lg md:h-[95vh] md:w-[96vw]"
       ></canvas>
     </section>
 
     <!-- Why -->
     <section id="why" class="h-fit px-5 py-32 md:px-10 lg:px-20 lg:py-36">
-      <p class="text-center text-2xl md:text-5xl md:leading-12">
+      <p class="body-text text-center text-2xl md:text-5xl md:leading-12">
         Work wasn’t meant to <br class="hidden md:block" />
         feel this <span class="text-terra">fragmented</span>
       </p>
@@ -104,7 +110,7 @@
         class="mt-10 flex w-full flex-col items-center justify-center gap-x-30 xl:flex-row"
       >
         <div class="basis-full">
-          <p class="text-base md:text-lg md:leading-10">
+          <p class="body-text text-base md:text-lg md:leading-10">
             Teams juggle projects across disconnected tools, conversations
             splinter across channels, and decisions vanish into endless message
             threads. Context is constantly lost, priorities blur, and progress
@@ -128,7 +134,7 @@
       id="benefits"
       class="scroll-section px-5 py-10 md:px-10 md:py-20 lg:px-20"
     >
-      <p class="text-center text-2xl md:text-5xl md:leading-12">
+      <p class="body-text text-center text-2xl md:text-5xl md:leading-12">
         Ordo brings everything <br class="hidden md:block" />
         into <span class="text-terra">alignment</span>
       </p>
@@ -137,32 +143,32 @@
         class="mt-10 flex h-full grid-cols-9 grid-rows-2 flex-col gap-y-16 md:gap-y-32 lg:gap-10 lg:gap-y-36 xl:grid xl:gap-y-40"
       >
         <!-- Work -->
-        <div class="relative col-start-1 col-end-4 h-1/2 rounded-md md:h-fit">
+        <div
+          class="-[50vh] relative col-start-1 col-end-4 lg:h-[70vh] xl:h-[80vh]"
+        >
           <img
             src="/work.jpg"
-            class="img-fil h-full w-full rounded object-cover"
+            class="img-fil mask-one h-full w-full object-cover"
             alt=""
           />
-          <div
-            class="bg-secondary text-primary outline-primary absolute bottom-0 left-0 flex h-fit w-2/3 items-center rounded-2xl rounded-tl-none rounded-br-none p-2 outline-6"
-          >
-            <p class="text-xs md:text-base">
+          <div class="absolute top-0 right-0">
+            <p class="body-text text-xs md:text-base">
               It doesn’t replace how you work. It makes it make sense.
             </p>
           </div>
         </div>
 
         <!-- Lights -->
-        <div class="relative col-start-7 col-end-10 h-full rounded-md">
+        <div
+          class="relative col-start-7 col-end-10 h-[50vh] lg:h-[70vh] xl:h-[80vh]"
+        >
           <img
             src="/light.jpg"
-            class="img-fil h-full w-full rounded object-cover"
+            class="img-fil mask-two h-full w-full object-cover"
             alt=""
           />
-          <div
-            class="bg-secondary text-primary outline-primary absolute top-0 right-0 flex h-fit w-2/3 items-center rounded-2xl rounded-tl-none rounded-br-none p-2 outline-6"
-          >
-            <p class="text-xs md:text-base">
+          <div class="absolute right-0 bottom-0">
+            <p class="body-text text-xs md:text-base">
               Ordo continuously analyzes tasks, conversations, and timelines to
               keep work moving in the right direction.
             </p>
@@ -171,12 +177,14 @@
 
         <!-- Row 2 Caption -->
         <div class="col-span-2 col-start-1">
-          <p class="text-base font-semibold">Ordo — Benefits & Usecases</p>
+          <p class="body-text text-base font-semibold">
+            Ordo — Benefits & Usecases
+          </p>
         </div>
 
         <!-- Long Paragraph -->
         <div class="lg:col-start-4 lg:col-end-6">
-          <p class="text-sm">
+          <p class="body-text text-sm">
             Ordo brings clarity to modern work by quietly coordinating what
             matters most. It reduces manual oversight by automatically surfacing
             priorities, connecting related tasks across tools, and keeping teams
@@ -197,41 +205,43 @@
 
         <!-- Glitch Img -->
         <div class="h-1/2 lg:col-start-7 lg:col-end-10">
-          <img
-            src="/glitch.jpg"
-            class="img-fil w-full rounded object-cover"
-            alt=""
-          />
+          <img src="/glitch.jpg" class="img-fil mask-two w-full object-cover" alt="" />
         </div>
       </div>
     </section>
 
     <!-- Final -->
-    <footer id="contact" class="my-20 px-5 md:my-40 md:px-10 lg:px-20">
-      <div
-        class="bg-secondary text-primary flex h-fit flex-col items-center justify-center rounded-lg p-5 md:h-96 md:p-10"
-      >
-        <p class="text-center text-2xl md:text-5xl">
-          From <span class="text-terra">Chaos</span> to
-          <span class="text-light">Clarity</span>
-        </p>
-        <p class="mt-2 text-center text-base md:text-lg lg:text-xl">
-          Start working in a system that understands order.
-        </p>
 
-        <button
-          class="text-secondary bg-light mt-10 flex w-fit cursor-pointer items-center rounded px-4 py-2"
-        >
-          Get Early Access
-          <i class="hgi hgi-stroke hgi-arrow-right-02 ml-1"></i>
-        </button>
+    <footer
+      id="start"
+      class="bg-secondary text-primary flex h-fit flex-col items-center justify-between px-5 py-20 md:h-96"
+    >
+      <p class="body-text text-center text-2xl md:text-5xl">
+        From <span class="text-terra">Chaos</span> to
+        <span class="text-light">Clarity</span>
+      </p>
+      <p class="body-text mt-2 text-center text-base md:text-lg lg:text-xl">
+        Start working in a system that understands order.
+      </p>
+
+      <button
+        class="text-secondary group bg-light tran mt-10 flex w-fit cursor-pointer items-center rounded px-4 py-2"
+      >
+        Get Early Access
+        <img
+          src="/image.png"
+          class="ml-1 h-4 w-4 transition-all duration-150 ease-in-out group-hover:ml-3"
+          alt="arrow-right"
+        />
+      </button>
+      <div
+        class="mt-5 flex w-full justify-end px-5 md:mt-auto md:px-10 lg:px-20"
+      >
+        <p class="body-text text-xs">© 2026 Ordo</p>
       </div>
     </footer>
 
-    <footer class="flex justify-end px-5 py-5 md:px-10 lg:px-20">
-      <p class="text-xs">© 2026 Ordo</p>
-    </footer>
-
+    <script type="module" src="./anim.js"></script>
     <script type="module" src="./hero.js"></script>
     <script type="module" src="./align.js"></script>
   </body>

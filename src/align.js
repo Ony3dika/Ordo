@@ -24,7 +24,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   100,
 );
-camera.position.z = 3;
+camera.position.z = 25;
 
 // Controls
 const controls = new OrbitControls(camera, canvas);
@@ -67,10 +67,10 @@ let mesh = new THREE.Points(geometry, points);
 scene.add(mesh);
 
 // Scroll
-window.addEventListener("wheel", (e) => {
-  const speed = 0.03;
-  camera.position.z += e.deltaY * speed;
-});
+// window.addEventListener("wheel", (e) => {
+//   const speed = 0.03;
+//   camera.position.z += e.deltaY * speed;
+// });
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({
