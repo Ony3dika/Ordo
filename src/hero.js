@@ -22,6 +22,10 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.z = 4;
 
+if (sizes.width < 1024) {
+  camera.position.z = 24;
+}
+
 // Mouse
 const mouse = { x: 0.5, y: 0.5 };
 // Params
@@ -42,11 +46,9 @@ let material = new THREE.PointsMaterial({
 });
 
 let mesh = new THREE.Points(geometry, material);
-// mesh.rotation.z = Math.PI / 0.35;
-// mesh.rotation.x = Math.PI * 0.3;
 
-  mesh.rotation.z = Math.PI * (mouse.x * 0.5);
-  mesh.rotation.x = -(Math.PI * mouse.y);
+mesh.rotation.z = Math.PI * (mouse.x * 0.5);
+mesh.rotation.x = -(Math.PI * mouse.y);
 scene.add(mesh);
 
 // MouseMove
@@ -109,6 +111,13 @@ window.addEventListener("resize", () => {
     sizes.width = width;
     sizes.height = height;
     camera.aspect = width / height;
+    if (sizes.width < 1024) {
+      camera.position.z = 10;
+      mesh.position.x = 0.4;
+    } else {
+      camera.position.z = 4;
+      mesh.position.x = 1;
+    }
     camera.updateProjectionMatrix();
   }
 });
@@ -125,7 +134,6 @@ const tick = () => {
   mesh.rotation.x = -(Math.PI * mouse.y);
 
   renderer.render(scene, camera);
-
   // Call tick again on the next frame
   window.requestAnimationFrame(tick);
 };
