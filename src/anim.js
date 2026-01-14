@@ -1,11 +1,20 @@
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-// Preloader Animation
+//Configure Lenis
+const lenis = new Lenis();
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
 
+requestAnimationFrame(raf);
+
+// Preloader Animation
 // Logo
 gsap.to(".ordo", {
   yPercent: -1000,
