@@ -66,12 +66,6 @@ geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
 let mesh = new THREE.Points(geometry, points);
 scene.add(mesh);
 
-// Scroll
-// window.addEventListener("wheel", (e) => {
-//   const speed = 0.03;
-//   camera.position.z += e.deltaY * speed;
-// });
-
 // Renderer
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
