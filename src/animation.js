@@ -14,6 +14,30 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+// Expand Hero
+let hero = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".webgl",
+    scrub: true,
+    start: "top 0%",
+    end: "3%",
+    invalidateOnRefresh: true,
+  },
+});
+
+hero.to(".webgl, hero", {
+  height: "100vh",
+  width: "100vw",
+  ease: "none",
+  borderRadius: 0,
+  
+},0);
+
+hero.to(".logo", {
+  autoAlpha: 0,
+  ease: "expo",
+},0);
+
 // Preloader Animation
 // Logo
 gsap.to(".ordo", {
@@ -73,7 +97,6 @@ document.fonts.ready.then(() => {
       scrollTrigger: {
         trigger: text,
         start: "top 70%",
-        // markers: true,
       },
     });
   });

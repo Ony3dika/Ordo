@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="overflow-hidden scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,7 +47,7 @@
       >
         <a
           href="#hero"
-          class="hover:text-light/80 border-none text-light flex h-8 items-center justify-center rounded px-4 font-semibold transition-all duration-150 ease-in md:h-12"
+          class="hover:text-light/80 text-light flex h-8 items-center justify-center rounded border-none px-4 font-semibold transition-all duration-150 ease-in md:h-12"
         >
           <img src="/logo.svg" class="mr-1 h-4 w-4" alt="logo" />Ordo</a
         >
@@ -75,11 +75,11 @@
       class="threejs-container relative isolate flex h-screen items-center justify-center"
     >
       <div
-        class="text-primary z-2 flex h-[96vh] w-[96vw] flex-col justify-between rounded-lg bg-transparent p-5 md:h-[95vh] md:w-[96vw] md:p-10"
+        class="hero text-primary relative z-2 flex h-[96vh] w-[96vw] flex-col justify-between rounded-lg bg-transparent p-5 md:h-[95vh] md:w-[96vw] md:p-10"
       >
-        <div>
-          <div class="flex items-start justify-between">
-            <div class="flex items-center">
+        <div class="pt-10">
+          <div class="sticky top-10 flex h-fit justify-between">
+            <div class="logo flex items-center">
               <img src="/logo.svg" class="mr-1 h-4 w-4" alt="" />
               <h1 class="text-light text-lg font-medium md:text-xl lg:text-xl">
                 Ordo
@@ -184,7 +184,7 @@
             class="img-fil mask-two h-full w-full object-cover"
             alt=""
           />
-          <div class="absolute left-0 bottom-0">
+          <div class="absolute bottom-0 left-0">
             <p class="body-text text-base">
               Ordo continuously analyzes tasks, conversations, and timelines to
               keep work moving in the right direction.
